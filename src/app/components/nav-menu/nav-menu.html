@@ -1,0 +1,103 @@
+﻿<!-- ===== Mobile top bar (visible < lg) ===== -->
+<header
+  class="lg:hidden fixed top-0 inset-x-0 z-50 flex items-center justify-between
+         px-5 py-4 bg-accent/95 backdrop-blur text-white shadow-md
+         transition-transform duration-300"
+  [class.bar-hidden]="hidden() && !menuOpen()"
+>
+  <a href="#about" class="font-nunito font-bold text-lg tracking-wide">
+    {{ profile.name }}
+  </a>
+  <button
+    type="button"
+    (click)="toggleMenu()"
+    aria-label="Toggle menu"
+    class="p-2 rounded-md hover:bg-white/10 transition"
+  >
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      @if (!menuOpen()) {
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      } @else {
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      }
+    </svg>
+  </button>
+</header>
+
+<!-- ===== Mobile drawer overlay ===== -->
+@if (menuOpen()) {
+  <div
+    class="lg:hidden fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
+    (click)="closeMenu()"
+  ></div>
+}
+
+<!-- ===== Sidebar (desktop) / drawer (mobile) ===== -->
+<aside
+  class="site-nav fixed top-0 left-0 z-50 h-screen w-72 bg-accent text-white
+         flex flex-col px-7 py-8 transition-transform duration-300"
+  [class.open]="menuOpen()"
+  [class.nav-hidden]="hidden() && !menuOpen()"
+>
+  <!-- Profile summary -->
+  <div class="text-center mb-8 mt-10 lg:mt-0">
+    <img
+      [src]="profile.photo"
+      [alt]="profile.name"
+      class="w-24 h-24 rounded-full object-cover mx-auto ring-4 ring-primary/60 mb-4"
+    />
+    <h1 class="font-caveat font-bold text-3xl tracking-wide">{{ profile.name }}</h1>
+    <p class="text-sm text-white/60 mt-1">{{ profile.title }}</p>
+  </div>
+
+  <!-- Nav links -->
+  <nav class="flex-1 overflow-y-auto no-scrollbar">
+    <ul class="space-y-1">
+      @for (item of navItems; track item.id) {
+        <li>
+          <a
+            [href]="'#' + item.id"
+            (click)="closeMenu()"
+            class="block px-4 py-2.5 rounded-lg font-nunito font-semibold text-sm
+                   text-white/75 hover:text-white hover:bg-primary/20 transition"
+          >
+            {{ item.label }}
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+
+  <!-- Download CV -->
+  <a
+    [href]="profile.resume"
+    download
+    (click)="closeMenu()"
+    class="mt-4 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg
+           bg-primary text-white font-nunito font-bold text-sm
+           hover:opacity-90 transition"
+  >
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+    </svg>
+    Download CV
+  </a>
+
+  <!-- Socials -->
+  <div class="flex items-center justify-center gap-4 pt-6 mt-4 border-t border-white/10">
+    @for (s of socials; track s.label) {
+      <a
+        [href]="s.url"
+        target="_blank"
+        rel="noopener"
+        [attr.aria-label]="s.label"
+        class="text-white/60 hover:text-primary transition"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+          <path [attr.d]="s.icon" />
+        </svg>
+      </a>
+    }
+  </div>
+</aside>

@@ -134,24 +134,40 @@ export const NAV_ITEMS: NavItem[] = [
 /* ---- Work experience -------------------------------------- */
 export const EXPERIENCES: Experience[] = [
   {
-    role: 'Associate Software Engineer',
-    company: 'Company Name',
-    period: 'Jan 2024 - Present',
-    location: 'City, Country',
+    role: 'Specialist Programmer L2',
+    company: 'Infosys LTD',
+    period: 'Oct 2025 - Present',
+    location: 'Pune, India',
     points: [
-      'Built and shipped features for a high-traffic web application using Angular and TypeScript.',
-      'Collaborated with cross-functional teams to deliver projects on schedule.',
-      'Improved page-load performance by 30% through code-splitting and lazy loading.',
+      'Working with B2B e-commerce platform solutions to enhance application functionalities and user experience.',
+      'Implemented OKTA integration to the application, providing seamless login mechanisms and improved security.',
+      'Delivering high-quality deliverables and integrations with other services to strengthen platform capabilities.',
+      'Supporting HackWithInfy events in Pune DC as a mentor, guiding college graduates and contributing to their professional growth.',
+      'Building best-practice design quality solutions that align with industry standards.',
     ],
   },
   {
-    role: 'Software Engineer Intern',
-    company: 'Another Company',
-    period: 'Jun 2023 - Dec 2023',
-    location: 'City, Country',
+    role: 'Specialist Programmer L1',
+    company: 'Infosys LTD',
+    period: 'Oct 2023 - Sept 2024',
+    location: 'Pune, India',
     points: [
-      'Developed reusable UI components adopted across multiple teams.',
-      'Wrote unit and integration tests, raising coverage to 85%.',
+      'Developed robust backend with Python Flask and optimized frontend with Angular 13, driving seamless full-stack performance.',
+      'Enhanced application efficiency by implementing database indexing and concurrent solutions with Celery, reducing latency and boosting responsiveness.',
+      'Led technical guidance for potential customers, increasing product adoption by over 20%.',
+      'Conducted in-house sessions on Generative AI and DSA for WABE, fostering career growth and building strong connections within the organization.',
+    ],
+  },
+  {
+    role: 'Digital Specialist Engineer',
+    company: 'Infosys LTD',
+    period: 'Oct 2021 - Sept 2023',
+    location: 'Pune, India',
+    points: [
+      'Developed multilingual functionality using Spacy, expanding chatbot platform to 18 languages for global reach.',
+      'Key contributor to language neutralization and group bot on Coreyx, enhancing conversational AI for enterprise use cases.',
+      'Led innovative Generative AI projects with ChatGPT API, boosting AI/ML capabilities within the team.',
+      'Honored with STG Rise Award (Prodigy category) for excellence in project impact and execution.',
     ],
   },
 ];

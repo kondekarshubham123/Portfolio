@@ -175,16 +175,22 @@ export const EXPERIENCES: Experience[] = [
 /* ---- Education -------------------------------------------- */
 export const EDUCATION: Education[] = [
   {
-    degree: 'BSc in Computer Science and Engineering',
-    institution: 'University Name',
-    period: '2020 - 2024',
-    detail: 'Graduated with honours. Focus on software engineering and AI.',
+    degree: 'Bachelor of Engineering',
+    institution: 'Punyashlok Ahilyadevi Holkar Solapur University',
+    period: '2017 - 2021',
+    detail: 'Completed a Bachelor of Engineering in Electronics and Telecommunication with a strong foundation in electronics, communication systems, and software development.',
   },
   {
-    degree: 'High School Diploma',
-    institution: 'School Name',
-    period: '2018 - 2020',
-    detail: 'Science stream. Top of class in mathematics.',
+    degree: 'Higher Secondary Certificate (HSC)',
+    institution: 'Rajmata Jijamata College, Latur',
+    period: '2016 - 2017',
+    detail: 'Completed Higher Secondary education in the Science stream with Physics, Chemistry, and Mathematics (PCM).',
+  },
+  {
+    degree: 'Secondary School Certificate (SSC)',
+    institution: 'Shri Deshikendra Vidyalaya, Latur',
+    period: '2014 - 2015',
+    detail: 'Completed Secondary School education, building a strong foundation in core academic subjects.',
   },
 ];
 

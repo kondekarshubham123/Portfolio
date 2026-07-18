@@ -407,6 +407,13 @@ export const CERTIFICATIONS: Certification[] = [
     link: 'https://learn.microsoft.com/api/credentials/share/en-us/shubham-kondekar/B9F2A8CA9E41E7D3?sharingId=D1E474A0B3A1FDB',
   },
   {
+    name: 'GitHub Advanced Security (GH-500)',
+    issuer: 'GitHub',
+    year: 'Intermediate',
+    image: 'images/certs/github.svg',
+    link: 'https://learn.microsoft.com/api/credentials/share/en-in/shubham-kondekar/9EABCFAF59CB7D12?sharingId=D1E474A0B3A1FDB',
+  },
+  {
     name: 'Microsoft Azure Developer Associate (AZ-204)',
     issuer: 'Microsoft',
     year: 'Intermediate',

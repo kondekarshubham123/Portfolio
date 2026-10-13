@@ -205,7 +205,7 @@ export const PROJECTS: Project[] = [
       'A comprehensive automated micro-saving and retirement projection system built for Blackrock Hackathon. Features intelligent savings recommendations, retirement goal tracking, and predictive analytics.',
     ranking: '🥈 1st Runner-up Prize',
     tags: ['Python', 'FastAPI', 'Redis', 'Celery', 'Docker', 'Vite'],
-    image: '/images/projects/retirement-saver.svg',
+    image: 'images/projects/retirement-saver.svg',
     links: [
       { label: '🔗 Repository', url: 'https://github.com/kondekarshubham123/Smart-Retirement-Saver/' },
       { label: '🚀 Live Demo', url: 'https://kondekarshubham123.github.io/Smart-Retirement-Saver/' },
@@ -218,7 +218,7 @@ export const PROJECTS: Project[] = [
       'A robust, scalable and secure conversational AI solution for enterprise helpdesk automation using NLP Query understanding. Leverages advanced LLM orchestration with real-time ticket resolution.',
     ranking: '🥇 1st Prize',
     tags: ['Arize Phoenix', 'Gemini 2.5 Flash', 'LLM Orchestration', 'Next.js', 'Framer Motion', 'Docker'],
-    image: '/images/projects/wipro-genai.svg',
+    image: 'images/projects/wipro-genai.svg',
     links: [
       { label: '🔗 Repository', url: 'https://github.com/kondekarshubham123/Wipro-Genai-Helpdesk-Intelligence' },
       { label: '🏆 Challenge', url: 'https://www.topcoder.com/challenges/9a93c2d4-9f8d-4198-bb4d-428afbbb5879' },
@@ -230,7 +230,7 @@ export const PROJECTS: Project[] = [
       'An agentic AI application for real-time compliance screening of orders ensuring regulatory and legal adherence. Implements multi-agent framework for autonomous compliance verification and risk assessment.',
     ranking: '🥉 2nd Prize',
     tags: ['FastAPI', 'Python', 'LangChain', 'LangGraph', 'Gemini 2.0', 'PostgreSQL', 'Redis', 'Docker'],
-    image: '/images/projects/compliance-screening.svg',
+    image: 'images/projects/compliance-screening.svg',
     links: [
       { label: '🔗 Repository', url: 'https://github.com/kondekarshubham123/Wipro-AI-Driven-Compliance-Screening-System' },
       { label: '🏆 Challenge', url: 'https://www.topcoder.com/challenges/bab325f3-87ba-4914-a772-6c4c34b0cceb' },
@@ -241,7 +241,7 @@ export const PROJECTS: Project[] = [
     description:
       'A progressive web application for tracking daily expenses with advanced analytics and spending insights. Built with Firebase for real-time sync. Planned AI-powered expense categorization and smart budgeting features.',
     tags: ['PWA', 'Angular', 'Firebase', 'Google Sign-On'],
-    image: '/images/projects/coinly.svg',
+    image: 'images/projects/coinly.svg',
     links: [
       { label: '🔗 Repository', url: 'https://github.com/kondekarshubham123/Smart-Expense-Tracker' },
       { label: '🚀 Live Demo', url: 'https://kondekarshubham123.github.io/Smart-Expense-Tracker/' },

@@ -45,12 +45,9 @@ import { PROJECTS } from '../../portfolio-data';
                px-6 md:px-12 scroll-px-6 md:scroll-px-12 pt-2 pb-8 scroll-smooth"
       >
         @for (project of projects; track project.title) {
-          <a
-            [href]="project.link || '#'"
-            target="_blank"
-            rel="noopener"
+          <div
             class="group paper-card snap-start shrink-0 w-80 overflow-hidden
-                   hover:shadow-lg hover:-translate-y-1 transition block !p-0"
+                   hover:shadow-lg hover:-translate-y-1 transition flex flex-col !p-0"
           >
             <!-- cover image -->
             <div class="h-44 w-full overflow-hidden bg-canvas">
@@ -62,18 +59,24 @@ import { PROJECTS } from '../../portfolio-data';
               />
             </div>
 
-            <div class="p-5">
+            <div class="p-5 flex flex-col flex-1">
+              <!-- Ranking Badge -->
+              @if (project.ranking) {
+                <div class="mb-3">
+                  <span class="inline-block font-nunito font-bold text-xs px-3 py-1.5 rounded-full 
+                               bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 shadow-md">
+                    {{ project.ranking }}
+                  </span>
+                </div>
+              }
+              
               <div class="flex items-start justify-between mb-2">
                 <h3 class="font-nunito font-semibold text-lg text-accent group-hover:text-primary transition">
                   {{ project.title }}
                 </h3>
-                <svg class="w-5 h-5 text-muted group-hover:text-primary transition shrink-0 mt-1" fill="none"
-                     stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10" />
-                </svg>
               </div>
-              <p class="font-nunito text-muted text-sm mb-4">{{ project.description }}</p>
-              <div class="flex flex-wrap gap-2">
+              <p class="font-nunito text-muted text-sm mb-4 flex-1">{{ project.description }}</p>
+              <div class="flex flex-wrap gap-2 mb-4">
                 @for (tag of project.tags; track tag) {
                   <span class="font-nunito text-xs font-semibold px-3 py-1 rounded-full
                                bg-primary-light text-primary">
@@ -81,8 +84,46 @@ import { PROJECTS } from '../../portfolio-data';
                   </span>
                 }
               </div>
+
+              <!-- Project Links -->
+              @if (project.links && project.links.length > 0) {
+                <div class="flex flex-wrap gap-2 pt-3 border-t border-border-soft">
+                  @for (link of project.links; track link.label) {
+                    <a
+                      [href]="link.url"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex items-center gap-1 font-nunito text-xs font-semibold px-3 py-2 
+                             rounded bg-primary/10 text-primary hover:bg-primary hover:text-white 
+                             transition duration-200"
+                      title="{{ link.label }}"
+                    >
+                      {{ link.label }}
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10" />
+                      </svg>
+                    </a>
+                  }
+                </div>
+              } @else if (project.link) {
+                <div class="pt-3 border-t border-border-soft">
+                  <a
+                    [href]="project.link || '#'"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center gap-1 font-nunito text-xs font-semibold px-3 py-2 
+                           rounded bg-primary/10 text-primary hover:bg-primary hover:text-white 
+                           transition duration-200"
+                  >
+                    View Project
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10" />
+                    </svg>
+                  </a>
+                </div>
+              }
             </div>
-          </a>
+          </div>
         }
       </div>
 

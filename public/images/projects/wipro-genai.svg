@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#grad2)"/>
+  
+  <!-- Chatbot/Helpdesk icon -->
+  <rect x="220" y="110" width="200" height="140" rx="10" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="280" cy="160" r="8" fill="#ffffff"/>
+  <circle cx="320" cy="160" r="8" fill="#ffffff"/>
+  <circle cx="360" cy="160" r="8" fill="#ffffff"/>
+  
+  <!-- Message bubbles -->
+  <path d="M 240 200 L 240 220 Q 240 230 250 230 L 310 230 Q 320 230 320 220 L 320 200 Z" fill="#ffffff" opacity="0.3"/>
+  <path d="M 340 210 L 340 225 Q 340 235 350 235 L 380 235 Q 390 235 390 225 L 390 210 Z" fill="#ffffff" opacity="0.5"/>
+  
+  <text x="50%" y="310" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif"
+        font-size="36" font-weight="700" text-anchor="middle">GenAI Helpdesk</text>
+  <text x="50%" y="360" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif"
+        font-size="24" font-weight="500" text-anchor="middle" opacity="0.9">Intelligence</text>
+</svg>

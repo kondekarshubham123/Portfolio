@@ -34,9 +34,11 @@ export interface Education {
 export interface Project {
   title: string;
   description: string;
+  ranking?: string; // e.g. "1st Prize", "Runner-up", etc.
   tags: string[];
   image: string; // cover image URL or /public path
   link?: string;
+  links?: { label: string; url: string }[];
 }
 
 export interface Skill {
@@ -61,6 +63,7 @@ export interface ExtraCurricular {
   title: string;
   detail: string;
   year: string;
+  links?: { label: string; url: string }[];
 }
 
 export interface Certification {
@@ -136,7 +139,7 @@ export const EXPERIENCES: Experience[] = [
   {
     role: 'Specialist Programmer L2',
     company: 'Infosys LTD',
-    period: 'Oct 2025 - Present',
+    period: 'Oct 2024 - Present',
     location: 'Pune, India',
     points: [
       'Working with B2B e-commerce platform solutions to enhance application functionalities and user experience.',
@@ -197,36 +200,52 @@ export const EDUCATION: Education[] = [
 /* ---- Projects --------------------------------------------- */
 export const PROJECTS: Project[] = [
   {
-    title: 'Banking System',
+    title: 'Smart Retirement Saver',
     description:
-      'A full-stack banking application with secure authentication, transactions and reporting.',
-    tags: ['Angular', 'Node.js', 'PostgreSQL'],
-    image: 'images/projects/banking.svg',
-    link: '#',
+      'A comprehensive automated micro-saving and retirement projection system built for Blackrock Hackathon. Features intelligent savings recommendations, retirement goal tracking, and predictive analytics.',
+    ranking: '🥈 1st Runner-up Prize',
+    tags: ['Python', 'FastAPI', 'Redis', 'Celery', 'Docker', 'Vite'],
+    image: '/images/projects/retirement-saver.svg',
+    links: [
+      { label: '🔗 Repository', url: 'https://github.com/kondekarshubham123/Smart-Retirement-Saver/' },
+      { label: '🚀 Live Demo', url: 'https://kondekarshubham123.github.io/Smart-Retirement-Saver/' },
+      { label: '🏆 Event', url: 'https://www.hackerrank.com/event/blackrock-hackingindia2026' },
+    ],
   },
   {
-    title: 'Food Ordering Platform',
+    title: 'Wipro GenAI Helpdesk Intelligence',
     description:
-      'A responsive food-delivery web app with real-time order tracking.',
-    tags: ['React', 'Express', 'MongoDB'],
-    image: 'images/projects/food-ordering.svg',
-    link: '#',
+      'A robust, scalable and secure conversational AI solution for enterprise helpdesk automation using NLP Query understanding. Leverages advanced LLM orchestration with real-time ticket resolution.',
+    ranking: '🥇 1st Prize',
+    tags: ['Arize Phoenix', 'Gemini 2.5 Flash', 'LLM Orchestration', 'Next.js', 'Framer Motion', 'Docker'],
+    image: '/images/projects/wipro-genai.svg',
+    links: [
+      { label: '🔗 Repository', url: 'https://github.com/kondekarshubham123/Wipro-Genai-Helpdesk-Intelligence' },
+      { label: '🏆 Challenge', url: 'https://www.topcoder.com/challenges/9a93c2d4-9f8d-4198-bb4d-428afbbb5879' },
+    ],
   },
   {
-    title: 'Video Sharing Application',
+    title: 'Wipro AI Compliance Screening',
     description:
-      'A video-sharing platform with uploads, comments and recommendations.',
-    tags: ['Angular', 'Firebase', 'TypeScript'],
-    image: 'images/projects/video-sharing.svg',
-    link: '#',
+      'An agentic AI application for real-time compliance screening of orders ensuring regulatory and legal adherence. Implements multi-agent framework for autonomous compliance verification and risk assessment.',
+    ranking: '🥉 2nd Prize',
+    tags: ['FastAPI', 'Python', 'LangChain', 'LangGraph', 'Gemini 2.0', 'PostgreSQL', 'Redis', 'Docker'],
+    image: '/images/projects/compliance-screening.svg',
+    links: [
+      { label: '🔗 Repository', url: 'https://github.com/kondekarshubham123/Wipro-AI-Driven-Compliance-Screening-System' },
+      { label: '🏆 Challenge', url: 'https://www.topcoder.com/challenges/bab325f3-87ba-4914-a772-6c4c34b0cceb' },
+    ],
   },
   {
-    title: 'Meeting Tools',
+    title: 'Coinly - Smart Expense Tracker',
     description:
-      'A suite of tools to schedule, run and summarise team meetings.',
-    tags: ['Vue', 'Python', 'FastAPI'],
-    image: 'images/projects/meeting-tools.svg',
-    link: '#',
+      'A progressive web application for tracking daily expenses with advanced analytics and spending insights. Built with Firebase for real-time sync. Planned AI-powered expense categorization and smart budgeting features.',
+    tags: ['PWA', 'Angular', 'Firebase', 'Google Sign-On'],
+    image: '/images/projects/coinly.svg',
+    links: [
+      { label: '🔗 Repository', url: 'https://github.com/kondekarshubham123/Smart-Expense-Tracker' },
+      { label: '🚀 Live Demo', url: 'https://kondekarshubham123.github.io/Smart-Expense-Tracker/' },
+    ],
   },
 ];
 
@@ -367,12 +386,20 @@ export const AWARDS: Award[] = [
 
 /* ---- Extra curricular ------------------------------------- */
 export const EXTRA_CURRICULAR: ExtraCurricular[] = [
-  { title: 'AI Multi-Agent Challenge', detail: 'Finalist', year: '2024' },
-  { title: 'Public Speaking Contest', detail: 'Winner', year: '2024' },
-  { title: 'Open Source — Hacktoberfest', detail: 'Contributor', year: '2024' },
-  { title: 'National Swimming Championship', detail: 'Participant', year: '2023' },
-  { title: 'Coding Competition', detail: 'Top 10', year: '2023' },
-  { title: 'Debate Tournament', detail: 'Semi-finalist', year: '2023' },
+  { 
+    title: 'HackWithInfy Level Up - Navigator Sessions', 
+    detail: 'Conducted 3 sessions on Infosys YouTube channel with 170K+ total views', 
+    year: '2025',
+    links: [
+      { label: 'Session 1', url: 'https://www.youtube.com/live/DWe8TGW0EjM' },
+      { label: 'Session 2', url: 'https://www.youtube.com/live/w3_WNG8GYOc' },
+      { label: 'Bonus', url: 'https://www.youtube.com/live/_jEps8GSc2c' }
+    ]
+  },
+  { title: 'Core Mentor at WABE & STEP Cohort', detail: 'Mentored ~450 colleagues in career progression to Specialist Programmer level', year: '2025' },
+  { title: 'Tech Tuesday Sessions', detail: 'Conducted sessions on AI for SDLC and GenAI use cases at Pune campus DC', year: '2025' },
+  { title: 'Euphoria 30 Years Celebration', detail: 'Presented Tableau roadshow showcasing Pune DC\'s 30-year journey; won Audience Choice Award', year: '2026' },
+  { title: 'Open Source — Hacktoberfest', detail: 'Active Contributor', year: '2026' },
 ];
 
 /* ---- Certifications (external: Microsoft, AWS, etc.) ------- */

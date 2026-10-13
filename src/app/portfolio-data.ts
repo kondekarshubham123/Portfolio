@@ -95,7 +95,7 @@ export const PROFILE = {
   tagline:
     'I build clean, scalable web applications and love turning ideas into polished products.',
   // Replace with your own image URL or a file in /public
-  photo: 'images/profile.svg',
+  photo: 'images/profile.heic',
   email: 'kondekarshubham123@gmail.com',
   location: 'India',
   // Put your CV at portfolio/public/resume.pdf (or change this to any URL)
@@ -252,12 +252,11 @@ export const PROJECTS: Project[] = [
 /* ---- Gallery (taped polaroids, horizontal scroll) ---------
    Swap the placeholder URLs for your own photos (or files in /public). */
 export const GALLERY: GalleryPhoto[] = [
-  { src: 'images/gallery/photo-1.svg', caption: 'Hackathon win 🏆' },
-  { src: 'images/gallery/photo-2.svg', caption: 'Team offsite' },
-  { src: 'images/gallery/photo-3.svg', caption: 'Speaking at a meetup' },
-  { src: 'images/gallery/photo-4.svg', caption: 'Graduation day 🎓' },
-  { src: 'images/gallery/photo-5.svg', caption: 'Side-project demo' },
-  { src: 'images/gallery/photo-6.svg', caption: 'Workshop with friends' },
+  { src: 'images/gallery/Tech-discussion.HEIC', caption: 'Tuesday Tech Discussions' },
+  { src: 'images/gallery/hackwithinfy-session.png', caption: '<> Hackwithinfy Session </>' },
+  { src: 'images/gallery/instep-bizhacks.png', caption: 'Instep BizHacks Event' },
+  { src: 'images/gallery/blackrock-event.png', caption: 'Blackrock Hackathon Event' },
+  { src: 'images/gallery/stg-makeathon.JPG', caption: 'STG Makeathon' },
 ];
 
 /* ---- Skills ----------------------------------------------- */

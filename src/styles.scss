@@ -1,7 +1,7 @@
 /* ===========================================================
    Global styles + Tailwind v4 + NOTEBOOK theme
    =========================================================== */
-@import "tailwindcss";
+@use "tailwindcss";
 
 /* ---- Theme tokens (Tailwind v4 CSS-based config) ----------
    Token NAMES are kept stable so components don't need editing;
